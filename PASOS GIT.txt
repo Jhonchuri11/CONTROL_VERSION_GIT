@@ -1,0 +1,302 @@
+---gi--------------------------------------
+-----------------------------------------
+             CURSO GIT
+-----------------------------------------
+-----------------------------------------
+<> PARA SUBIR UN PROYECTO CLONADO DE OTRO USUARIO A TU PROPIO REPOSITORIO REMOTO:
+
+
+PASO 1: Ingresar en la carpeta donde esta el proyecto
+
+
+PASO 2: Comando: git remote set-url origin <Link del repositorio>
+
+PASO 3: git add . 
+
+
+PASO 4: git commit -m "Mensaje"
+
+
+PASO 5: git push -u origin main
+
+<> DESPUÉS DE HABER SUBIDO EL PROYECTO, AHORA PARA SUBIR ALGUNOS CAMBIOS SE SIGUEN LO SIGUIENTE:
+
+PASO 6. git status   
+
+- Esto te permite ver que cambios has generado en el desarrollo de tu proyecto.
+
+
+PASO 7: git add .
+
+
+- Agrega esos cambios
+
+
+PASO 8: git commit -m "Mensaje"
+
+- Realizas el commit y un breve mensaje
+
+PASO 9: git push origin main
+
+- Subes los cambios al branch main
+
+----------------------------------------
+----------------------------------------
+
+
+CREACIÓN DE UN NUEVO BRANCH DE UN PROYECTO EN GIT
+
+1. git branch
+
+Proporciona todos los branch disponibles
+
+_______________________________________
+
+
+2. git branch feature-newStyle
+              <NombreBranhNew>
+
+Permite crear un nuevo branch
+
+_______________________________________
+
+
+3. git checkout <NombreRamaUsar>
+
+EJEMPLO ANTERIOR: git checkout feature-newStyle
+
+Permite indicar que rama quieres utilizar
+Cambiar la rama que estamos examinando
+
+________________________________________
+
+
+4. Para directo crear una rama y usar 
+
+git checkout -b <NombreRama>
+                feature-newHomePage
+
+________________________________________
+
+5. 
+git branch -m <NombreAnteriorRama>         <NombreNuevodeRama>
+              feature-newHomePage feature-newHome
+
+
+Cambiar el nombre de la rama
+
+________________________________________
+
+6. git branch -d <NombreRamaEliminar>
+                 feature-newHome
+
+
+Eliminar una rama
+
+7. git -h 
+
+Ayuda
+
+________________________________________
+
+
+
+8. MANTENER UNA NUEVA RAMA COMMIT
+
+DESPUÉS DE CREAR UN NUEVO BRANCH AHORA QUEREMOS PUBLICARLO DEBEMOS SEGUIR LO SIGUIENTE:
+
+git push origin sprint-2
+
+
+
+_________________________________________
+
+9. Ahora hacer un commit entre la nueva rama creada sin tocar el principal que es funcional Main
+
+- git checkout <NombreRama>
+
+
+10. Verificar y  agregar después de la modificación
+
+- git status
+
+- git add .
+
+11. Hacer un commit y un comentario
+
+ git commit -m "Mensaje"
+
+
+12. AHORA SUBIR EL CAMBIO AL REMOTE
+
+git push origin <NombreBranch>
+
+
+13. Verificar el repo
+
+- git log --oneline --decorate 
+
+14. Ver todos los commit
+
+- git log --oneline --decorate --all 
+
+_______________________________________
+
+PARA REALIZAR UN MERGE: ES DECIR UNIFICAR LOS CAMBIOS QUE SE REALIZARON DEL NUEVO BRANCH YA VERIFICADO Y FUNCIONAL AL BRANCH PRINCIPAL, como breve ejemplo siempre al branch main (principal)
+
+15. para verificar el repo
+
+git log --oneline --decorate --all --graph
+
+16. Para hacer una fusión, primero ingresar a la rama de destino:
+
+En este caso que siempre es el main
+
+
+git checkout main
+
+17. Después el siguiente, nombre del branch unificar
+
+git merge <NombreBranchUnificar>
+
+
+18. VERIFICAR EL PROCE N° 15(igual)
+
+git log --oneline --decorate --all --graph
+
+
+19. git log : Ver commits
+
+20. git status: Ver
+
+
+21. git commit -m "Mensaje"
+
+
+22. git push origin main
+
+
+Ver los resultados en el Repo Remote
+
+
+-----------------------------------
+
+OJO:
+
+Actualiza tu rama principal local con los cambios del repositorio remoto:
+
+git pull origin main
+
+
+-----------------------------------------
+-----------------------------------------
+             CURSO REACT
+-----------------------------------------
+-----------------------------------------
+
+
+
+PARA CREAR UN PROYECTO REACT.
+
+
+
+PASO 1: npx create-react-app <NombreApp>
+
+Paso 2: npm install
+
+PASO 4: Ejecución del proyecto: npm run start
+
+
+
+----------------------------------------------------
+
+
+OTRA FORMA PARA CREAR UN PROYECTO REACT CON VITE:
+
+
+
+Paso 1: npm create vite
+
+Paso 2: Seleccionar react y el lenguaje Typescripts o Javascript
+
+PASO 3: Ingresar al proyecto. cd <Nombre>
+
+PASO 4: Install los componentes
+
+- npm install
+
+
+PASO 5: Ejecutar el proyecto:
+
+- npm run dev
+
+-----------------------------------------------------
+-----------------------------------------------------
+
+PARA PODER SUBIR UN PROYECTO QUE YA ESTABA CREADO Y SUBIDO EN OTRA CUENTA DE REPO SEGUI ESTOS PASOS:
+
+1. git clone <NombrePo>
+
+2. Ingresar a la carpeta, hacer cambios 
+
+CD <NombrePo>
+
+3. git remote set-url origin <URL>
+
+4. Luego seguir los pasos normales
+
+
+
+
+function cambioEstado() {
+    var button = document.getElementById("showSearch");
+    var anotherSearchSection = document.getElementById('SearchSection');
+    if (button.innerHTML === "Mostrar filtros") {
+        button.innerHTML = "Ocultar filtros";
+        anotherSearchSection.style.display = 'block';
+    } else {
+        button.innerHTML = "Mostrar filtros";
+        anotherSearchSection.style.display = 'none';
+    }
+}
+
+-----------------------------------------------
+
+
+PASOS PARA CREAR UN NUEVO BRANCH SABIENDO QUE YA TIENES CREADO OTROS BRANCHS:
+
+1. Inicializar el projet
+
+- git init
+
+2. Agregar los doc
+
+- Antes de eso revistar el estado
+
+<> git status
+<> git add .
+
+3. Realizar el commit
+
+- git commit -m "Comentario"
+
+4. Revisar los branch
+
+- git branch
+
+5. Crear el nuevo branch
+
+
+EJEMPLO:  git branch feature/crud_gestor_doc
+
+6. REALIZAR EL PRIMER PUSH
+
+- git remote add origin <LINK URL>
+
+
+7. LUEGO EL SEGUNDO PUSH PARA UNIR CON EL BRANCH Y PUBLICARLO EN REPO
+
+EJEMPLO:  
+
+git push -u origin feature/crud_gestor_doc
+
